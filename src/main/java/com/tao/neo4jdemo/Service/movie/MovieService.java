@@ -1,8 +1,7 @@
-package com.tao.neo4jdemo.Service;
+package com.tao.neo4jdemo.Service.movie;
 
 
-import com.tao.neo4jdemo.entity.Movie;
-import com.tao.neo4jdemo.repository.MovieRepository;
+import com.tao.neo4jdemo.entity.movie.Movie;
 
 import java.util.List;
 

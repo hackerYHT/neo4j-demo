@@ -1,6 +1,6 @@
-package com.tao.neo4jdemo.repository;
+package com.tao.neo4jdemo.repository.movie;
 
-import com.tao.neo4jdemo.entity.Movie;
+import com.tao.neo4jdemo.entity.movie.Movie;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
 import org.springframework.stereotype.Repository;
 

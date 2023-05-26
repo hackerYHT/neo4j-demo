@@ -1,4 +1,4 @@
-package com.tao.neo4jdemo.entity;
+package com.tao.neo4jdemo.entity.movie;
 
 import lombok.Data;
 import org.springframework.data.neo4j.core.schema.RelationshipId;

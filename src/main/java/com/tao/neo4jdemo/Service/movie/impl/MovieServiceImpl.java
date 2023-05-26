@@ -1,8 +1,8 @@
-package com.tao.neo4jdemo.Service.impl;
+package com.tao.neo4jdemo.Service.movie.impl;
 
-import com.tao.neo4jdemo.Service.MovieService;
-import com.tao.neo4jdemo.entity.Movie;
-import com.tao.neo4jdemo.repository.MovieRepository;
+import com.tao.neo4jdemo.Service.movie.MovieService;
+import com.tao.neo4jdemo.entity.movie.Movie;
+import com.tao.neo4jdemo.repository.movie.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

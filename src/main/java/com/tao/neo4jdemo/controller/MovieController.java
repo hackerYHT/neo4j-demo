@@ -1,7 +1,7 @@
 package com.tao.neo4jdemo.controller;
 
-import com.tao.neo4jdemo.Service.MovieService;
-import com.tao.neo4jdemo.entity.Movie;
+import com.tao.neo4jdemo.Service.movie.MovieService;
+import com.tao.neo4jdemo.entity.movie.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
