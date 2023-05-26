@@ -1,5 +1,7 @@
 package com.tao.neo4jdemo.entity.movie;
 
+import com.tao.neo4jdemo.entity.movie.relationship.Review;
+import com.tao.neo4jdemo.entity.movie.relationship.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
