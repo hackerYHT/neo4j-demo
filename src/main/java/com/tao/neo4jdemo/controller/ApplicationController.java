@@ -43,8 +43,8 @@ public class ApplicationController {
     }
 
     @GetMapping("/deleteApplication")
-    public String deleteApplication(@RequestParam Integer id) {
-        applicationService.deleteApplication(id);
+    public String deleteApplication(@RequestParam Integer appId) {
+        applicationService.deleteApplication(appId);
         return "删除成功！";
     }
 }
