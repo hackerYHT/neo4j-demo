@@ -1,5 +1,6 @@
 package com.tao.neo4jdemo.entity.application;
 
+import com.tao.neo4jdemo.entity.application.relationship.BelongTo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,6 +31,6 @@ public class Instance {
     private String baremetal;
 
     @Relationship(type = "BELONG_TO", direction = Relationship.Direction.OUTGOING)
-    private Application application;
+    private BelongTo belongTo;
 
 }

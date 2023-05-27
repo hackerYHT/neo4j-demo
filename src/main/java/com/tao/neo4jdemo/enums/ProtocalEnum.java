@@ -1,4 +1,4 @@
-package com.tao.neo4jdemo.entity.application.relationship;
+package com.tao.neo4jdemo.enums;
 
 /**
  * @author yehaitao01

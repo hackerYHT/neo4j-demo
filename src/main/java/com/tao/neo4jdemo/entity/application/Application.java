@@ -1,12 +1,13 @@
 package com.tao.neo4jdemo.entity.application;
 
+import com.tao.neo4jdemo.entity.application.relationship.BelongTo;
+import com.tao.neo4jdemo.entity.application.relationship.InvokeApplication;
+import com.tao.neo4jdemo.entity.application.relationship.InvokeDatabase;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.neo4j.core.schema.Id;
-import org.springframework.data.neo4j.core.schema.Node;
-import org.springframework.data.neo4j.core.schema.Property;
-import org.springframework.data.neo4j.core.schema.Relationship;
+import org.springframework.data.neo4j.core.schema.*;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Application {
     @Id
     private Integer appId;
@@ -34,14 +36,12 @@ public class Application {
     private String l2Biz;
 
     @Relationship(type = "BELONG_TO", direction = Relationship.Direction.INCOMING)
-    private List<Instance> instances;
+    private List<BelongTo> belongTos;
 
-    // 出口关系
-    @Relationship(type = "OUTGOING_RELATIONSHIP")
-    private Application outgoingApplication;
+    @Relationship(type = "INVOKE", direction = Relationship.Direction.OUTGOING)
+    private List<InvokeApplication> invokeApplications;
 
-    // 入口关系
-    @Relationship(type = "INCOMING_RELATIONSHIP", direction = Relationship.Direction.INCOMING)
-    private Application incomingApplication;
+    @Relationship(type = "INVOKE", direction = Relationship.Direction.OUTGOING)
+    private List<InvokeDatabase> invokeDatabases;
 
 }
