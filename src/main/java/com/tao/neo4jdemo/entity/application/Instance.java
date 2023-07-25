@@ -19,14 +19,13 @@ import org.springframework.data.neo4j.core.schema.Relationship;
 public class Instance {
 
     @Id
-    @GeneratedValue
+    private String name;
+
     private Long id;
 
     private String ip;
 
     private String port;
-
-    private String name;
 
     private String baremetal;
 

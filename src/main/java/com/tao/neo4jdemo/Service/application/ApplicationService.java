@@ -15,6 +15,6 @@ public interface ApplicationService {
 
     void saveAndUpdateApplication(Application application);
 
-    void deleteApplication(Integer id);
+    void deleteApplication(Integer appId);
 
 }

@@ -31,16 +31,12 @@ public class Movie {
     @Property("released")
     private Integer released;
 
-    // 注意这些关系最终的箭头指向是当前实体，即TargetNode（Person）->当前定义Relationship的实体（Movie）
-    // 定义一个关系（参演）[direction]
     @Relationship(type = "ACTED_IN", direction = Relationship.Direction.INCOMING)
     private List<Role> actorsAndRoles;
 
-    // 定义一个关系（导演）
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.INCOMING)
     private List<Person> directors;
 
-    // 定义一个关系（评论）
     @Relationship(type = "REVIEWED", direction = Relationship.Direction.INCOMING)
     private List<Review> reviews;
 

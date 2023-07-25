@@ -1,7 +1,6 @@
 package com.tao.neo4jdemo.entity.application.relationship;
 
 import com.tao.neo4jdemo.entity.application.Application;
-import com.tao.neo4jdemo.entity.application.Instance;
 import lombok.Data;
 import org.springframework.data.neo4j.core.schema.Property;
 import org.springframework.data.neo4j.core.schema.RelationshipId;
@@ -13,15 +12,15 @@ import org.springframework.data.neo4j.core.schema.TargetNode;
  */
 @RelationshipProperties
 @Data
-public class BelongTo {
+public class Invoke {
 
     @RelationshipId
     private Long id;
 
     @TargetNode
-    private final Application application;
+    private Application application;
 
-    @Property("type")
-    private String type;
+    @Property("protocal")
+    private String protocal;
 
 }

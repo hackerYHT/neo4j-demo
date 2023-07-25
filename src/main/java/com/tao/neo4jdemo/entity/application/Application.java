@@ -1,6 +1,7 @@
 package com.tao.neo4jdemo.entity.application;
 
 import com.tao.neo4jdemo.entity.application.relationship.BelongTo;
+import com.tao.neo4jdemo.entity.application.relationship.Invoke;
 import com.tao.neo4jdemo.entity.application.relationship.InvokeApplication;
 import com.tao.neo4jdemo.entity.application.relationship.InvokeDatabase;
 import lombok.AllArgsConstructor;
@@ -39,9 +40,6 @@ public class Application {
     private List<BelongTo> belongTos;
 
     @Relationship(type = "INVOKE", direction = Relationship.Direction.OUTGOING)
-    private List<InvokeApplication> invokeApplications;
-
-    @Relationship(type = "INVOKE", direction = Relationship.Direction.OUTGOING)
-    private List<InvokeDatabase> invokeDatabases;
+    private List<Invoke> invokes;
 
 }
