@@ -2,11 +2,9 @@ package com.tao.neo4jdemo.controller;
 
 import com.tao.neo4jdemo.Service.application.ApplicationService;
 import com.tao.neo4jdemo.entity.application.Application;
+import com.tao.neo4jdemo.entity.req.ApplicationReq;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,19 +28,19 @@ public class ApplicationController {
         return applicationService.findByAppId(appId);
     }
 
-    @GetMapping("saveAndUpdateApplication")
-    public String saveAndUpdateApplication(@RequestParam Integer appId,
-                                @RequestParam String domain,
-                                @RequestParam String l1Biz,
-                                @RequestParam String l2Biz,
-                                @RequestParam String owner,
-                                @RequestParam String language) {
+    @PostMapping("saveAndUpdateApplication")
+    public String saveAndUpdateApplication(@RequestBody ApplicationReq applicationReq) {
         applicationService.saveAndUpdateApplication(Application.builder()
-                .appId(appId).domain(domain).l1Biz(l1Biz).l2Biz(l2Biz).owner(owner).language(language).build());
+                .appId(applicationReq.getAppId())
+                .domain(applicationReq.getDomain())
+                .l1Biz(applicationReq.getL1Biz())
+                .l2Biz(applicationReq.getL2Biz())
+                .owner(applicationReq.getOwner())
+                .language(applicationReq.getLanguage()).build());
         return "保存并更新成功！";
     }
 
-    @GetMapping("/deleteApplication")
+    @DeleteMapping("/deleteApplication")
     public String deleteApplication(@RequestParam Integer appId) {
         applicationService.deleteApplication(appId);
         return "删除成功！";
