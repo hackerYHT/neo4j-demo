@@ -46,4 +46,14 @@ public class InstanceController {
         return "删除成功！";
     }
 
+    @GetMapping("/getAllInstanceByHostMachineIp")
+    public List<Instance> getAllInstanceByHostMachineIp(@RequestParam String ip) {
+        return instanceService.getAllInstanceByHostMachineIp(ip);
+    }
+
+    @GetMapping("/getAllInstanceByAppName")
+    public List<Instance> getAllInstanceByAppName(@RequestParam String name) {
+        return instanceService.getAllInstanceByAppName(name);
+    }
+
 }

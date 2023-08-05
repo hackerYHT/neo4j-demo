@@ -4,6 +4,7 @@ import com.tao.neo4jdemo.Service.application.InstanceService;
 import com.tao.neo4jdemo.entity.application.Instance;
 import com.tao.neo4jdemo.repository.application.InstanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.neo4j.repository.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,6 +36,16 @@ public class InstanceServiceImpl implements InstanceService {
     @Override
     public void deleteInstance(String name) {
         instanceRepository.deleteById(name);
+    }
+
+    @Override
+    public List<Instance> getAllInstanceByHostMachineIp(String ip) {
+        return instanceRepository.getAllInstanceByHostMachineIp(ip);
+    }
+
+    @Override
+    public List<Instance> getAllInstanceByAppName(String name) {
+        return instanceRepository.getAllInstanceByAppName(name);
     }
 
 }

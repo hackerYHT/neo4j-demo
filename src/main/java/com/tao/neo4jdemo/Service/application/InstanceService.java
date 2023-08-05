@@ -15,4 +15,8 @@ public interface InstanceService {
     void saveAndUpdateInstance(Instance build);
 
     void deleteInstance(String name);
+
+    List<Instance> getAllInstanceByHostMachineIp(String ip);
+
+    List<Instance> getAllInstanceByAppName(String name);
 }
