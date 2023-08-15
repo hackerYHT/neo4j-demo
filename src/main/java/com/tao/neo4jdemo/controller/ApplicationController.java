@@ -24,7 +24,7 @@ public class ApplicationController {
     }
 
     @GetMapping("/findByAppId")
-    public Application findByAppId(@RequestParam Integer appId) {
+    public Application findByAppId(@RequestParam Long appId) {
         return applicationService.findByAppId(appId);
     }
 
@@ -41,7 +41,7 @@ public class ApplicationController {
     }
 
     @DeleteMapping("/deleteApplication")
-    public String deleteApplication(@RequestParam Integer appId) {
+    public String deleteApplication(@RequestParam Long appId) {
         applicationService.deleteApplication(appId);
         return "删除成功！";
     }

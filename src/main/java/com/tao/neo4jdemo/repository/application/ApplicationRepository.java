@@ -6,6 +6,6 @@ import org.springframework.data.neo4j.repository.Neo4jRepository;
 /**
  * @author yehaitao01
  */
-public interface ApplicationRepository extends Neo4jRepository<Application, Integer> {
-    Application findByAppId(Integer appId);
+public interface ApplicationRepository extends Neo4jRepository<Application, Long> {
+    Application findByAppId(Long appId);
 }

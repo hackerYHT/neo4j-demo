@@ -17,23 +17,31 @@ public class ApplicationServiceImpl implements ApplicationService {
     @Autowired
     private ApplicationRepository applicationRepository;
 
+    @Override
     public List<Application> getAllApplication(){
         return applicationRepository.findAll();
     }
 
-    public Application findByAppId(Integer appId){
+    @Override
+    public Application findByAppId(Long appId){
         return applicationRepository.findByAppId(appId);
     }
 
+    @Override
     public void saveAndUpdateApplication(Application application){
         Application res = applicationRepository.save(application);
         System.out.println("保存成功！");
     }
 
     @Override
-    public void deleteApplication(Integer appId) {
+    public void deleteApplication(Long appId) {
         applicationRepository.deleteById(appId);
         System.out.println("删除成功！");
+    }
+
+    @Override
+    public void batchInsertApp(List<Application> applicationList) {
+        applicationRepository.saveAll(applicationList);
     }
 
 }

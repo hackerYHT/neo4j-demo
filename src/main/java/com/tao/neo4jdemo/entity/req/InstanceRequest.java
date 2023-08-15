@@ -12,17 +12,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ApplicationReq {
-
-    private Long appId;
-
-    private String language;
-
-    private String domain;
-
-    private String owner;
-
-    private String l1Biz;
-
-    private String l2Biz;
+public class InstanceRequest {
+    private String env;
 }

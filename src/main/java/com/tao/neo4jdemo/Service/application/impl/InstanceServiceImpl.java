@@ -48,4 +48,9 @@ public class InstanceServiceImpl implements InstanceService {
         return instanceRepository.getAllInstanceByAppName(name);
     }
 
+    @Override
+    public void batchInstances(List<Instance> instancesList) {
+        instanceRepository.saveAll(instancesList);
+    }
+
 }

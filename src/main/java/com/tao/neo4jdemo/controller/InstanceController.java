@@ -30,15 +30,15 @@ public class InstanceController {
         return instance;
     }
 
-    @PostMapping("/saveAndUpdateInstance")
-    public String saveAndUpdateInstance(@RequestBody InstanceReq instanceReq) {
-        instanceService.saveAndUpdateInstance(Instance.builder()
-                .name(instanceReq.getName())
-                .baremetal(instanceReq.getBaremetal())
-                .ip(instanceReq.getIp())
-                .port(instanceReq.getPort()).build());
-        return "保存并更新成功！";
-    }
+//    @PostMapping("/saveAndUpdateInstance")
+//    public String saveAndUpdateInstance(@RequestBody InstanceReq instanceReq) {
+//        instanceService.saveAndUpdateInstance(Instance.builder()
+//                .name(instanceReq.getName())
+//                .baremetal(instanceReq.getBaremetal())
+//                .ip(instanceReq.getIp())
+//                .port(instanceReq.getPort()).build());
+//        return "保存并更新成功！";
+//    }
 
     @DeleteMapping("/deleteInstance")
     public String deleteInstance(@RequestParam String name) {

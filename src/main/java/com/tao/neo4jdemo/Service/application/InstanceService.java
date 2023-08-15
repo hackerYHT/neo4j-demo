@@ -19,4 +19,6 @@ public interface InstanceService {
     List<Instance> getAllInstanceByHostMachineIp(String ip);
 
     List<Instance> getAllInstanceByAppName(String name);
+
+    void batchInstances(List<Instance> instancesList);
 }

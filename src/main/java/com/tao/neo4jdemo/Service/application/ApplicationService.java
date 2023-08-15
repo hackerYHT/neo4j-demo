@@ -11,10 +11,12 @@ public interface ApplicationService {
 
     List<Application> getAllApplication();
 
-    Application findByAppId(Integer appId);
+    Application findByAppId(Long appId);
 
     void saveAndUpdateApplication(Application application);
 
-    void deleteApplication(Integer appId);
+    void deleteApplication(Long appId);
+
+    void batchInsertApp(List<Application> applicationList);
 
 }
