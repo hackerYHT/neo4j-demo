@@ -4,7 +4,7 @@ import cn.hutool.core.lang.TypeReference;
 import com.tao.neo4jdemo.BaseException;
 import com.tao.neo4jdemo.Service.client.JsonHttpClient;
 import com.tao.neo4jdemo.Service.stargate.StargateService;
-import com.tao.neo4jdemo.entity.req.InstanceRequest;
+import com.tao.neo4jdemo.req.InstanceRequest;
 import com.tao.neo4jdemo.resp.stargate.InstanceInfoResponse;
 import com.tao.neo4jdemo.resp.stargate.InstanceResp;
 import lombok.extern.slf4j.Slf4j;

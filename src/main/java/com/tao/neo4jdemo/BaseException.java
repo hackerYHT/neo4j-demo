@@ -1,6 +1,6 @@
 package com.tao.neo4jdemo;
 
-import com.tao.neo4jdemo.resp.MessageTypeEnum;
+import com.tao.neo4jdemo.enums.MessageTypeEnum;
 
 /**
  * @author hanxiantao

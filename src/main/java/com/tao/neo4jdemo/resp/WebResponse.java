@@ -1,5 +1,6 @@
 package com.tao.neo4jdemo.resp;
 
+import com.tao.neo4jdemo.enums.MessageTypeEnum;
 import lombok.Data;
 
 /**

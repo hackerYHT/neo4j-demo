@@ -1,9 +1,7 @@
 package com.tao.neo4jdemo.controller;
 
-import com.tao.neo4jdemo.Service.application.HostMachineService;
-import com.tao.neo4jdemo.Service.application.InstanceService;
-import com.tao.neo4jdemo.entity.application.HostMachine;
-import com.tao.neo4jdemo.entity.application.Instance;
+import com.tao.neo4jdemo.Service.business.HostMachineService;
+import com.tao.neo4jdemo.entity.business.HostMachine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,6 +39,12 @@ public class HostMachineController {
     public String deleteHostMachine(@RequestParam String ip) {
         hostMachineService.deleteHostMachine(ip);
         return "删除成功！";
+    }
+
+    @PostMapping("/importData")
+    public String getMovieByTitle(){
+        hostMachineService.importData();
+        return "impoer success";
     }
 
 }

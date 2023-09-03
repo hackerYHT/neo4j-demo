@@ -1,8 +1,8 @@
 package com.tao.neo4jdemo.controller;
 
-import com.tao.neo4jdemo.Service.application.ApplicationService;
-import com.tao.neo4jdemo.entity.application.Application;
-import com.tao.neo4jdemo.entity.req.ApplicationReq;
+import com.tao.neo4jdemo.Service.business.ApplicationService;
+import com.tao.neo4jdemo.entity.business.Application;
+import com.tao.neo4jdemo.req.ApplicationReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

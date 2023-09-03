@@ -29,8 +29,8 @@ public class JsonHttpClient {
 
     @PostConstruct
     public void initJsonHttpClient() {
-        Integer connTimeout = environment.getProperty(ADAPT_LIMIT_HTTP_CLIENT_CONN_TIMEOUT, Integer.class, 8000);
-        Integer readTimeout = environment.getProperty(ADAPT_LIMIT_HTTP_CLIENT_READ_TIMEOUT, Integer.class, 8000);
+        Integer connTimeout = environment.getProperty(ADAPT_LIMIT_HTTP_CLIENT_CONN_TIMEOUT, Integer.class, 15000);
+        Integer readTimeout = environment.getProperty(ADAPT_LIMIT_HTTP_CLIENT_READ_TIMEOUT, Integer.class, 15000);
         client = new OkHttpClient.Builder().connectTimeout(connTimeout, TimeUnit.MILLISECONDS)
                 .readTimeout(readTimeout, TimeUnit.MILLISECONDS).build();
     }

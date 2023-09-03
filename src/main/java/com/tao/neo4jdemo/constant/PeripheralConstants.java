@@ -17,4 +17,10 @@ public interface PeripheralConstants {
 
     String MESH = "mesh";
 
+    String INTERFACE_MARKET_LIST_CATALOG_URL = "http://wiki.ppdaicorp.com/voyager/website/getCatalogList";
+
+    String INTERFACE_MARKET_LIST_VERSION_URL = "http://wiki.ppdaicorp.com/voyager/website/versionList";
+
+    String INTERFACE_MARKET_GET_WEBSITEINFO_URL = "http://wiki.ppdaicorp.com/voyager/website/getWebsiteInfo";
+
 }
